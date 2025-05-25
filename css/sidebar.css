@@ -1,0 +1,82 @@
+﻿/* 기본 리셋 최소화 */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Arial, sans-serif;display:flex;}
+
+/* 사이드바 */
+#sidebar{
+  width:320px;           /* 이미지와 동일한 폭 */
+  height:100vh;
+  overflow-y:auto;
+  background:#fff;
+  border-right:1px solid #eee;
+  padding-bottom:2rem;
+}
+
+/* 프로필 */
+.profile{
+  text-align:center;
+  padding:2rem 1rem;
+}
+.profile img{
+  width:120px;
+  height:120px;
+  border-radius:20px;
+  object-fit:cover;
+}
+.profile h2{margin-top:1rem;font-size:1.3rem;}
+.profile .nick{color:#999;margin-top:4px;font-size:.9rem;}
+
+/* 퀵 버튼 */
+.quick{
+  display:flex;
+  justify-content:space-around;
+  margin:1.2rem 1rem;
+  padding:.6rem;
+  background:#f5f5f5;
+  border-radius:50px;
+}
+.quick button{
+  flex:1;
+  background:none;
+  border:none;
+  font-size:1.1rem;
+  padding:.6rem 0;
+  cursor:pointer;
+  color:#555;
+}
+.quick button:hover{color:#111;}
+
+/* 네비 */
+.nav{list-style:none;margin-top:1rem;}
+.group{
+  font-size:.9rem;
+  color:#ff4079;
+  padding:.8rem 1.4rem .4rem;
+  letter-spacing:.5px;
+}
+.nav ul{list-style:none;}
+.item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:.65rem 1.4rem;
+  cursor:pointer;
+  transition:background .15s;
+}
+.item span:first-child{display:flex;gap:.6rem;align-items:center;}
+.item i{width:18px;text-align:center;}
+.item:hover{background:#f9f9f9;}
+
+/* 뱃지 */
+.badge{
+  background:#ffeff3;
+  color:#ff4079;
+  border-radius:12px;
+  padding:.1rem .55rem;
+  font-size:.75rem;
+  font-weight:500;
+}
+
+.hide{
+    display:none;
+}
