@@ -1,0 +1,355 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>즐겨찾기 - 편의점 재고 확인 서비스</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/favorites.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 사이드바 -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>메뉴</h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="index.html">메인페이지</a></li>
+                <li><a href="store-list.html">편의점 목록</a></li>
+                <li><a href="favorites.html" class="active">즐겨찾기</a></li>
+            </ul>
+        </nav>
+
+        <!-- 메인 콘텐츠 -->
+        <div class="main-content">
+            <!-- 헤더 -->
+            <header class="header">
+                <div class="header-content">
+                    <img src="images/logo.png" alt="편의점 재고 확인 서비스" class="logo">
+                    <h1>편의점 재고 확인 서비스</h1>
+                </div>
+            </header>
+
+            <!-- 즐겨찾기 섹션 -->
+            <main class="favorites-section">
+                <div class="page-header">
+                    <h1>즐겨찾기 편의점</h1>
+                    <p>자주 이용하는 편의점을 한눈에 확인하세요</p>
+                </div>
+
+                <!-- 즐겨찾기 통계 -->
+                <div class="favorites-stats">
+                    <div class="stat-card">
+                        <h3>총 즐겨찾기</h3>
+                        <span class="stat-number">3개</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>재고 있는 매장</h3>
+                        <span class="stat-number">2개</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>품절 매장</h3>
+                        <span class="stat-number">1개</span>
+                    </div>
+                </div>
+
+                <!-- 즐겨찾기 편의점 목록 -->
+                <div class="favorites-list">
+                    <div class="favorite-store-card priority-high">
+                        <div class="store-header">
+                            <div class="store-title">
+                                <h3>CU 역삼점</h3>
+                                <span class="priority-badge">⭐ 우선순위 높음</span>
+                            </div>
+                            <div class="store-actions">
+                                <button class="favorite-btn active" title="즐겨찾기 제거">★</button>
+                                <button class="priority-btn" title="우선순위 설정">📌</button>
+                            </div>
+                        </div>
+                        <div class="store-info">
+                            <p class="address">📍 서울 강남구 역삼로 456</p>
+                            <p class="distance">🚶 750m • 도보 9분</p>
+                            <p class="last-update">🔄 최근 업데이트: 1시간 전</p>
+                        </div>
+                        <div class="stock-summary">
+                            <div class="stock-overview">
+                                <div class="available-items">
+                                    <h4>재고 있음 (4개)</h4>
+                                    <div class="item-tags">
+                                        <span class="item-tag available">도시락</span>
+                                        <span class="item-tag available">김밥</span>
+                                        <span class="item-tag available">샐러드</span>
+                                        <span class="item-tag available">핫바</span>
+                                    </div>
+                                </div>
+                                <div class="next-delivery">
+                                    <p>다음 입고: 15:30 (김밥, 샌드위치)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quick-actions">
+                            <a href="store-detail.html?store=cu-yeoksam" class="detail-btn">상세보기</a>
+                            <button class="directions-btn">길찾기</button>
+                        </div>
+                    </div>
+
+                    <div class="favorite-store-card priority-medium">
+                        <div class="store-header">
+                            <div class="store-title">
+                                <h3>CU 압구정점</h3>
+                                <span class="priority-badge">📍 우선순위 보통</span>
+                            </div>
+                            <div class="store-actions">
+                                <button class="favorite-btn active" title="즐겨찾기 제거">★</button>
+                                <button class="priority-btn" title="우선순위 설정">📌</button>
+                            </div>
+                        </div>
+                        <div class="store-info">
+                            <p class="address">📍 서울 강남구 압구정로 987</p>
+                            <p class="distance">🚶 2.0km • 도보 24분</p>
+                            <p class="last-update">🔄 최근 업데이트: 1시간 전</p>
+                        </div>
+                        <div class="stock-summary">
+                            <div class="stock-overview">
+                                <div class="available-items">
+                                    <h4>재고 있음 (3개)</h4>
+                                    <div class="item-tags">
+                                        <span class="item-tag available">도시락</span>
+                                        <span class="item-tag available">샐러드</span>
+                                        <span class="item-tag available">샌드위치</span>
+                                    </div>
+                                </div>
+                                <div class="out-of-stock-items">
+                                    <h4>품절 (1개)</h4>
+                                    <div class="item-tags">
+                                        <span class="item-tag out-of-stock">김밥 (16:00 입고 예정)</span>
+                                    </div>
+                                </div>
+                                <div class="next-delivery">
+                                    <p>다음 입고: 16:00 (김밥, 핫바)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quick-actions">
+                            <a href="store-detail.html?store=cu-apgujeong" class="detail-btn">상세보기</a>
+                            <button class="directions-btn">길찾기</button>
+                        </div>
+                    </div>
+
+                    <div class="favorite-store-card priority-low">
+                        <div class="store-header">
+                            <div class="store-title">
+                                <h3>CU 군산미룡점</h3>
+                                <span class="priority-badge">📍 우선순위 낮음</span>
+                            </div>
+                            <div class="store-actions">
+                                <button class="favorite-btn active" title="즐겨찾기 제거">★</button>
+                                <button class="priority-btn" title="우선순위 설정">📌</button>
+                            </div>
+                        </div>
+                        <div class="store-info">
+                            <p class="address">📍 전북 군산시 황룡2길 71-10</p>
+                            <p class="distance">🚶 500m • 도보 6분</p>
+                            <p class="last-update">🔄 최근 업데이트: 2시간 전</p>
+                        </div>
+                        <div class="stock-summary">
+                            <div class="stock-overview">
+                                <div class="available-items">
+                                    <h4>재고 있음 (2개)</h4>
+                                    <div class="item-tags">
+                                        <span class="item-tag available">도시락</span>
+                                        <span class="item-tag available">핫바</span>
+                                    </div>
+                                </div>
+                                <div class="out-of-stock-items">
+                                    <h4>품절 (2개)</h4>
+                                    <div class="item-tags">
+                                        <span class="item-tag out-of-stock">김밥 (14:30 입고 예정)</span>
+                                        <span class="item-tag out-of-stock">샌드위치 (15:00 입고 예정)</span>
+                                    </div>
+                                </div>
+                                <div class="next-delivery">
+                                    <p>다음 입고: 14:30 (김밥)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quick-actions">
+                            <a href="store-detail.html?store=gs25-gangnam" class="detail-btn">상세보기</a>
+                            <button class="directions-btn">길찾기</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 즐겨찾기 관리 도구 -->
+                <div class="favorites-management">
+                    <h2>즐겨찾기 관리</h2>
+                    <div class="management-options">
+                        <div class="priority-settings">
+                            <h3>우선순위 설정</h3>
+                            <p>자주 이용하는 순서대로 편의점의 우선순위를 설정할 수 있습니다.</p>
+                            <div class="priority-controls">
+                                <button class="priority-control-btn">우선순위 편집</button>
+                                <button class="priority-control-btn">자동 정렬</button>
+                            </div>
+                        </div>
+                        
+                        <div class="notification-settings">
+                            <h3>알림 설정</h3>
+                            <p>즐겨찾기한 편의점의 재고 변동 알림을 받을 수 있습니다.</p>
+                            <div class="notification-options">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked>
+                                    재고 부족 알림
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    입고 시간 알림
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    신제품 출시 알림
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="filter-options">
+                            <h3>필터 옵션</h3>
+                            <div class="filter-controls">
+                                <label for="distance-filter">거리 필터:</label>
+                                <select id="distance-filter">
+                                    <option value="all">전체</option>
+                                    <option value="500m">500m 이내</option>
+                                    <option value="1km">1km 이내</option>
+                                    <option value="2km">2km 이내</option>
+                                </select>
+
+                                <label for="stock-filter">재고 상태:</label>
+                                <select id="stock-filter">
+                                    <option value="all">전체</option>
+                                    <option value="available">재고 있음</option>
+                                    <option value="out-of-stock">품절</option>
+                                    <option value="low-stock">품절 임박</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 추천 편의점 -->
+                <div class="recommended-stores">
+                    <h2>추천 편의점</h2>
+                    <p>즐겨찾기 패턴을 바탕으로 추천하는 편의점입니다.</p>
+                    <div class="recommended-grid">
+                        <div class="recommended-card">
+                            <h4>세븐일레븐 선릉점</h4>
+                            <p class="address">서울 강남구 선릉로 789</p>
+                            <p class="reason">자주 찾는 제품이 풍부한 매장</p>
+                            <div class="card-actions">
+                                <button class="add-favorite-btn">즐겨찾기 추가</button>
+                                <a href="store-detail.html?store=emart24-nonhyeon" class="view-detail-btn">상세보기</a>
+                            </div>
+                        </div>
+
+                        <div class="recommended-card">
+                            <h4>GS25 신사점</h4>
+                            <p class="address">서울 강남구 신사동 654</p>
+                            <p class="reason">비슷한 위치의 사용자들이 자주 이용</p>
+                            <div class="card-actions">
+                                <button class="add-favorite-btn">즐겨찾기 추가</button>
+                                <a href="store-detail.html?store=gs25-sinsa" class="view-detail-btn">상세보기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 즐겨찾기 히스토리 -->
+                <div class="favorites-history">
+                    <h2>최근 방문 기록</h2>
+                    <div class="history-list">
+                        <div class="history-item">
+                            <div class="visit-info">
+                                <h4>CU 역삼점</h4>
+                                <p class="visit-date">2024-01-15 14:30</p>
+                            </div>
+                            <div class="visit-details">
+                                <p>구매한 제품: 도시락, 김밥</p>
+                                <p>재고 상태: 정확함</p>
+                            </div>
+                        </div>
+
+                        <div class="history-item">
+                            <div class="visit-info">
+                                <h4>GS25 강남역점</h4>
+                                <p class="visit-date">2024-01-14 18:45</p>
+                            </div>
+                            <div class="visit-details">
+                                <p>구매한 제품: 핫바, 샐러드</p>
+                                <p>재고 상태: 정확함</p>
+                            </div>
+                        </div>
+
+                        <div class="history-item">
+                            <div class="visit-info">
+                                <h4>CU 압구정점</h4>
+                                <p class="visit-date">2024-01-13 12:20</p>
+                            </div>
+                            <div class="visit-details">
+                                <p>구매한 제품: 샌드위치</p>
+                                <p>재고 상태: 정확함</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="view-more-history">더 보기</button>
+                </div>
+
+                <!-- 빈 즐겨찾기 상태 (JavaScript로 제어되어야 하지만 예시로 숨김 처리) -->
+                <div class="empty-favorites" style="display: none;">
+                    <div class="empty-state">
+                        <h2>아직 즐겨찾기한 편의점이 없습니다</h2>
+                        <p>자주 이용하는 편의점을 즐겨찾기에 추가하여<br>빠르고 편리하게 재고를 확인하세요!</p>
+                        <a href="store-list.html" class="add-favorites-btn">편의점 둘러보기</a>
+                    </div>
+                </div>
+            </main>
+
+            <!-- 푸터 -->
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-info">
+                        <h3>제작자 정보</h3>
+                        <p>편의점 재고 확인 서비스</p>
+                        <p>개발자: 웹 개발팀</p>
+                        <p>이메일: contact@convenience-store.com</p>
+                        <p>전화: 02-1234-5678</p>
+                    </div>
+                    <div class="footer-links">
+                        <h3>바로가기</h3>
+                        <ul>
+                            <li><a href="index.html">메인페이지</a></li>
+                            <li><a href="store-list.html">편의점 목록</a></li>
+                            <li><a href="favorites.html">즐겨찾기</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 편의점 재고 확인 서비스. All rights reserved.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html> 추가</button>
+                                <a href="store-detail.html?store=seven11-seolleung" class="view-detail-btn">상세보기</a>
+                            </div>
+                        </div>
+
+                        <div class="recommended-card">
+                            <h4>이마트24 논현점</h4>
+                            <p class="address">서울 강남구 논현로 321</p>
+                            <p class="reason">즐겨찾기한 매장과 유사한 재고 패턴</p>
+                            <div class="card-actions">
+                                <button class="add-favorite-btn">즐겨찾기
