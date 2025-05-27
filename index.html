@@ -1,22 +1,150 @@
 ﻿<!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Sidebar Demo</title>
-    <link rel="stylesheet" href="css/sidebar.css" />
-    <!-- 아이콘 용 (Font-Awesome) -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>편의점 재고 확인 서비스</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 사이드바 -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>메뉴</h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="index.html" class="active">메인페이지</a></li>
+                <li><a href="store-list.html">편의점 목록</a></li>
+                <li><a href="favorites.html">즐겨찾기</a></li>
+            </ul>
+        </nav>
 
-  <body>
-    <!-- 사이드 네비게이션 -->
-    <aside id="sidebar">
-      <div id="sidebar-nav"></div>
-    </aside>
-    <script type="module" src="js/load-sidebar.js"></script>
-    <script src="js/sidebar.js" defer></script>
-  </body>
+        <!-- 메인 콘텐츠 -->
+        <div class="main-content">
+            <!-- 헤더 -->
+            <header class="header">
+                <div class="header-content">
+                    <img src="images/logo.png" alt="편의점 재고 확인 서비스" class="logo">
+                    <h1>편의점 재고 확인 서비스</h1>
+                </div>
+            </header>
+
+            <!-- 메인 섹션 -->
+            <main class="main-section">
+                <div class="hero-section">
+                    <h1>편의점 재고를 미리 확인하세요!</h1>
+                    <p class="hero-subtitle">방문 전 실시간 재고와 입고 시간을 확인하여 헛걸음을 방지하세요.</p>
+                </div>
+
+                <div class="problem-section">
+                    <h2>해결하는 문제</h2>
+                    <div class="problem-grid">
+                        <div class="problem-card">
+                            <h3>고객의 불편함</h3>
+                            <ul>
+                                <li>도시락, 김밥, 핫바 등 신선식품 품절 문의 빈번</li>
+                                <li>품절 확인을 위한 직접 방문으로 인한 불편</li>
+                                <li>헛걸음으로 인한 시간 낭비</li>
+                            </ul>
+                        </div>
+                        <div class="problem-card">
+                            <h3>점주/알바의 부담</h3>
+                            <ul>
+                                <li>반복적인 재고 문의 응답</li>
+                                <li>업무 효율성 저하</li>
+                                <li>고객 응대 스트레스</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-section">
+                    <h2>제안 솔루션</h2>
+                    <div class="solution-content">
+                        <p>편의점별 신선식품 입고 스케줄을 수집하고 공개하는 웹사이트를 통해 고객은 방문 전 웹에서 실시간 재고와 다음 입고 시간을 확인할 수 있습니다.</p>
+                    </div>
+                </div>
+
+                <div class="features-section">
+                    <h2>핵심 기능</h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <h3>편의점 검색</h3>
+                            <p>원하는 편의점을 빠르게 찾아보세요</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>실시간 재고 확인</h3>
+                            <p>품목별 현재 재고와 예상 입고 시간을 확인하세요</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>즐겨찾기 기능</h3>
+                            <p>자주 이용하는 편의점을 즐겨찾기로 등록하세요</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>정렬 및 필터링</h3>
+                            <p>다양한 조건으로 편의점을 정렬하고 필터링하세요</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="benefits-section">
+                    <h2>기대 효과</h2>
+                    <div class="benefits-grid">
+                        <div class="benefit-card customer">
+                            <h3>고객 혜택</h3>
+                            <ul>
+                                <li>헛걸음 최소화</li>
+                                <li>구매 만족도 향상</li>
+                                <li>시간 절약</li>
+                            </ul>
+                        </div>
+                        <div class="benefit-card owner">
+                            <h3>점주/알바 혜택</h3>
+                            <ul>
+                                <li>반복적인 문의 감소</li>
+                                <li>업무 효율성 향상</li>
+                                <li>고객 서비스 품질 개선</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <h2>지금 시작하세요!</h2>
+                    <p>편의점 재고를 미리 확인하고 스마트한 쇼핑을 경험해보세요.</p>
+                    <a href="store-list.html" class="cta-button">편의점 목록 보기</a>
+                </div>
+            </main>
+
+            <!-- 푸터 -->
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-info">
+                        <h3>제작자 정보</h3>
+                        <p>편의점 재고 확인 서비스</p>
+                        <p>개발자: 웹 개발팀</p>
+                        <p>이메일: contact@convenience-store.com</p>
+                        <p>전화: 02-1234-5678</p>
+                    </div>
+                    <div class="footer-links">
+                        <h3>바로가기</h3>
+                        <ul>
+                            <li><a href="index.html">메인페이지</a></li>
+                            <li><a href="store-list.html">편의점 목록</a></li>
+                            <li><a href="favorites.html">즐겨찾기</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 편의점 재고 확인 서비스. All rights reserved.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
 </html>
