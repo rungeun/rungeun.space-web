@@ -1,0 +1,476 @@
+﻿/* 편의점 상세 페이지 스타일 */
+.store-detail-section {
+    flex: 1;
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 브레드크럼 */
+.breadcrumb {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.breadcrumb a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* 매장 헤더 */
+.store-header {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.store-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.store-title h1 {
+    color: #2c3e50;
+    font-size: 2.2em;
+    margin: 0;
+}
+
+.report-btn {
+    background: #e74c3c;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.report-btn:hover {
+    background: #c0392b;
+}
+
+.store-basic-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.store-basic-info p {
+    margin: 0;
+    padding: 8px 0;
+    color: #555;
+    font-size: 16px;
+}
+
+/* 재고 현황 섹션 */
+.stock-section {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.stock-section h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.stock-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.stock-item {
+    border: 2px solid #eee;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.stock-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stock-item.available {
+    border-color: #27ae60;
+    background: linear-gradient(135deg, #d5f4e6, #ffffff);
+}
+
+.stock-item.out-of-stock {
+    border-color: #e74c3c;
+    background: linear-gradient(135deg, #fadbd8, #ffffff);
+}
+
+.stock-item.low-stock {
+    border-color: #f39c12;
+    background: linear-gradient(135deg, #fef5e7, #ffffff);
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.item-header h3 {
+    margin: 0;
+    font-size: 1.3em;
+    color: #2c3e50;
+}
+
+.item-details p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.current-stock {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.next-delivery {
+    color: #3498db;
+    font-weight: bold;
+}
+
+.delivery-schedule {
+    color: #666;
+    font-style: italic;
+}
+
+/* 배송 스케줄 섹션 */
+.delivery-schedule-section {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.delivery-schedule-section h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    border-bottom: 3px solid #27ae60;
+    padding-bottom: 10px;
+}
+
+.schedule-timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.schedule-timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #ddd;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 25px;
+    padding: 15px 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -22px;
+    top: 20px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    background: white;
+}
+
+.timeline-item.completed::before {
+    background: #27ae60;
+    border-color: #27ae60;
+}
+
+.timeline-item.upcoming::before {
+    background: #3498db;
+    border-color: #3498db;
+}
+
+.timeline-item .time {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.timeline-item.completed {
+    border-left: 4px solid #27ae60;
+}
+
+.timeline-item.upcoming {
+    border-left: 4px solid #3498db;
+}
+
+.delivery-info h4 {
+    margin: 0 0 5px 0;
+    color: #2c3e50;
+}
+
+.delivery-info p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/* 댓글 섹션 */
+.comments-section {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.comments-section h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    border-bottom: 3px solid #9b59b6;
+    padding-bottom: 10px;
+}
+
+/* 댓글 작성 폼 */
+.comment-form {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.comment-form h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.submit-btn {
+    background: #3498db;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #2980b9;
+}
+
+/* 댓글 목록 */
+.comments-list {
+    margin-bottom: 20px;
+}
+
+.comment-item {
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.author {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.rating {
+    color: #f39c12;
+    font-size: 14px;
+}
+
+.date {
+    color: #95a5a6;
+    font-size: 12px;
+}
+
+.comment-content p {
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+}
+
+.comment-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* 신고 모달 */
+.report-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal-content h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.cancel-btn {
+    background: #95a5a6;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel-btn:hover {
+    background: #7f8c8d;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .store-detail-section {
+        padding: 20px 15px;
+    }
+    
+    .store-header {
+        padding: 20px;
+    }
+    
+    .store-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .store-title h1 {
+        font-size: 1.8em;
+    }
+    
+    .store-basic-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .stock-section,
+    .delivery-schedule-section,
+    .comments-section {
+        padding: 20px;
+    }
+    
+    .stock-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .schedule-timeline {
+        padding-left: 20px;
+    }
+    
+    .comment-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .store-title h1 {
+        font-size: 1.5em;
+    }
+    
+    .stock-section h2,
+    .delivery-schedule-section h2,
+    .comments-section h2 {
+        font-size: 1.5em;
+    }
+    
+    .modal-content {
+        padding: 20px;
+        width: 95%;
+    }
+}

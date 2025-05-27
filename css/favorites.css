@@ -1,0 +1,661 @@
+﻿/* 즐겨찾기 페이지 스타일 */
+.favorites-section {
+    flex: 1;
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 즐겨찾기 통계 */
+.favorites-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card:nth-child(1) {
+    border-top: 4px solid #3498db;
+}
+
+.stat-card:nth-child(2) {
+    border-top: 4px solid #27ae60;
+}
+
+.stat-card:nth-child(3) {
+    border-top: 4px solid #e74c3c;
+}
+
+.stat-card h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.stat-number {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* 즐겨찾기 편의점 목록 */
+.favorites-list {
+    margin-bottom: 50px;
+}
+
+.favorite-store-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.favorite-store-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.favorite-store-card.priority-high {
+    border-left: 5px solid #e74c3c;
+}
+
+.favorite-store-card.priority-medium {
+    border-left: 5px solid #f39c12;
+}
+
+.favorite-store-card.priority-low {
+    border-left: 5px solid #95a5a6;
+}
+
+.store-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.store-title {
+    flex: 1;
+}
+
+.store-title h3 {
+    color: #2c3e50;
+    font-size: 1.4em;
+    margin: 0 0 5px 0;
+}
+
+.priority-badge {
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.priority-high .priority-badge {
+    background: #fadbd8;
+    color: #e74c3c;
+}
+
+.priority-medium .priority-badge {
+    background: #fef5e7;
+    color: #f39c12;
+}
+
+.priority-low .priority-badge {
+    background: #f8f9fa;
+    color: #95a5a6;
+}
+
+.store-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.priority-btn {
+    background: none;
+    border: 1px solid #ddd;
+    color: #666;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.priority-btn:hover {
+    background: #f39c12;
+    color: white;
+    border-color: #f39c12;
+}
+
+.store-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.store-info p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/* 재고 요약 */
+.stock-summary {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.stock-overview {
+    display: grid;
+    gap: 15px;
+}
+
+.available-items h4,
+.out-of-stock-items h4 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.available-items h4 {
+    color: #27ae60;
+}
+
+.out-of-stock-items h4 {
+    color: #e74c3c;
+}
+
+.item-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.item-tag {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.item-tag.available {
+    background: #d4edda;
+    color: #155724;
+}
+
+.item-tag.out-of-stock {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.next-delivery {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #dee2e6;
+}
+
+.next-delivery p {
+    margin: 0;
+    font-size: 13px;
+    color: #3498db;
+    font-weight: bold;
+}
+
+/* 빠른 액션 버튼 */
+.quick-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.detail-btn,
+.directions-btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.detail-btn {
+    background: #3498db;
+    color: white;
+}
+
+.detail-btn:hover {
+    background: #2980b9;
+    color: white;
+}
+
+.directions-btn {
+    background: #27ae60;
+    color: white;
+}
+
+.directions-btn:hover {
+    background: #229954;
+}
+
+/* 즐겨찾기 관리 도구 */
+.favorites-management {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.favorites-management h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    border-bottom: 3px solid #9b59b6;
+    padding-bottom: 10px;
+}
+
+.management-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.priority-settings,
+.notification-settings,
+.filter-options {
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: #f8f9fa;
+}
+
+.priority-settings h3,
+.notification-settings h3,
+.filter-options h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.priority-settings p,
+.notification-settings p {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.priority-controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.priority-control-btn {
+    background: #9b59b6;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 15px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.priority-control-btn:hover {
+    background: #8e44ad;
+}
+
+.notification-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #2c3e50;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin: 0;
+}
+
+.filter-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.filter-controls label {
+    color: #2c3e50;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.filter-controls select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* 추천 편의점 */
+.recommended-stores {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.recommended-stores h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+.recommended-stores > p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.recommended-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.recommended-card {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 20px;
+    background: #fafafa;
+    transition: all 0.3s ease;
+}
+
+.recommended-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+.recommended-card h4 {
+    color: #2c3e50;
+    margin: 0 0 8px 0;
+    font-size: 1.1em;
+}
+
+.recommended-card .address {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.recommended-card .reason {
+    color: #3498db;
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.card-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.add-favorite-btn,
+.view-detail-btn {
+    padding: 8px 15px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-favorite-btn {
+    background: #f39c12;
+    color: white;
+    flex: 1;
+}
+
+.add-favorite-btn:hover {
+    background: #e67e22;
+}
+
+.view-detail-btn {
+    background: #3498db;
+    color: white;
+    flex: 1;
+}
+
+.view-detail-btn:hover {
+    background: #2980b9;
+    color: white;
+}
+
+/* 즐겨찾기 히스토리 */
+.favorites-history {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.favorites-history h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    border-bottom: 3px solid #16a085;
+    padding-bottom: 10px;
+}
+
+.history-list {
+    margin-bottom: 20px;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.history-item:last-child {
+    border-bottom: none;
+}
+
+.visit-info h4 {
+    color: #2c3e50;
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+}
+
+.visit-date {
+    color: #95a5a6;
+    font-size: 12px;
+    margin: 0;
+}
+
+.visit-details {
+    text-align: right;
+}
+
+.visit-details p {
+    margin: 0;
+    font-size: 13px;
+    color: #666;
+}
+
+.view-more-history {
+    background: #16a085;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.view-more-history:hover {
+    background: #138d75;
+}
+
+/* 빈 즐겨찾기 상태 */
+.empty-favorites {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.empty-state {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.empty-state h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+.empty-state p {
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.add-favorites-btn {
+    background: #3498db;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.add-favorites-btn:hover {
+    background: #2980b9;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .favorites-section {
+        padding: 20px 15px;
+    }
+    
+    .favorites-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .favorite-store-card {
+        padding: 20px;
+    }
+    
+    .store-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .store-actions {
+        align-self: flex-end;
+    }
+    
+    .store-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .quick-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .favorites-management,
+    .recommended-stores,
+    .favorites-history {
+        padding: 20px;
+    }
+    
+    .management-options,
+    .recommended-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .history-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .visit-details {
+        text-align: left;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .favorite-store-card {
+        padding: 15px;
+    }
+    
+    .store-title h3 {
+        font-size: 1.2em;
+    }
+    
+    .item-tags {
+        justify-content: center;
+    }
+    
+    .quick-actions {
+        flex-direction: column;
+    }
+    
+    .detail-btn,
+    .directions-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .card-actions {
+        flex-direction: column;
+    }
+}
