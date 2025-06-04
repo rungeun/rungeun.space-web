@@ -1,0 +1,554 @@
+/* 공지사항 페이지 스타일 */
+.notice-section {
+    flex: 1;
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 중요 공지사항 */
+.important-notices {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.important-notices::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(45deg);
+}
+
+.important-notices h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.important-notice-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 1;
+}
+
+.important-notice-item h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.3em;
+}
+
+.notice-preview {
+    margin: 10px 0;
+    opacity: 0.95;
+    line-height: 1.6;
+}
+
+/* 공지사항 필터 */
+.notice-filters {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-options label {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.filter-options select {
+    padding: 8px 12px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.search-option {
+    display: flex;
+    gap: 10px;
+}
+
+.search-option input {
+    padding: 10px 15px;
+    border: 2px solid #eee;
+    border-radius: 20px;
+    font-size: 14px;
+    min-width: 200px;
+}
+
+.search-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.search-btn:hover {
+    background: #2980b9;
+}
+
+/* 공지사항 목록 */
+.notice-list {
+    margin-bottom: 40px;
+}
+
+.notice-item {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.notice-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.notice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+.notice-title-area {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.notice-badge {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+.notice-badge.important {
+    background: #ff6b6b;
+    color: white;
+}
+
+.notice-badge.update {
+    background: #74b9ff;
+    color: white;
+}
+
+.notice-badge.event {
+    background: #00b894;
+    color: white;
+}
+
+.notice-badge.system {
+    background: #fdcb6e;
+    color: #2c3e50;
+}
+
+.notice-badge.policy {
+    background: #a29bfe;
+    color: white;
+}
+
+.notice-badge.maintenance {
+    background: #6c5ce7;
+    color: white;
+}
+
+.notice-title {
+    color: #2c3e50;
+    margin: 0;
+    font-size: 1.2em;
+    line-height: 1.4;
+}
+
+.notice-date {
+    color: #95a5a6;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.notice-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.notice-views {
+    color: #95a5a6;
+    font-size: 12px;
+}
+
+.notice-expand {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.notice-expand:hover {
+    background: #2980b9;
+}
+
+.notice-content {
+    display: none;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    color: #666;
+    line-height: 1.7;
+}
+
+.notice-content.expanded {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        max-height: 500px;
+    }
+}
+
+.notice-content h4 {
+    color: #2c3e50;
+    margin: 20px 0 10px 0;
+    font-size: 1.1em;
+}
+
+.notice-content ul,
+.notice-content ol {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.notice-content li {
+    margin-bottom: 8px;
+}
+
+.notice-content strong {
+    color: #2c3e50;
+}
+
+/* 페이지네이션 */
+.notice-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.page-btn {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    background: white;
+    color: #666;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.page-btn:hover:not(:disabled) {
+    background: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+.page-btn.active {
+    background: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+.page-btn:disabled {
+    background: #f8f9fa;
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+/* 공지사항 구독 */
+.notice-subscription {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.notice-subscription h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+.notice-subscription > p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.subscription-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.subscription-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.subscription-input input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #eee;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+.subscribe-btn {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background: #229954;
+}
+
+.subscription-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.subscription-options .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #2c3e50;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* 통계 정보 */
+.notice-stats {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.notice-stats h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+.notice-stats .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.notice-stats .stat-item {
+    background: #f8f9fa;
+    padding: 25px 15px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.notice-stats .stat-item:hover {
+    background: #3498db;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.notice-stats .stat-number {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.notice-stats .stat-item:hover .stat-number {
+    color: white;
+}
+
+.notice-stats .stat-label {
+    font-size: 14px;
+    color: #666;
+}
+
+.notice-stats .stat-item:hover .stat-label {
+    color: white;
+}
+
+/* 공지사항 메타 정보 */
+.notice-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #95a5a6;
+}
+
+.notice-date {
+    color: #95a5a6;
+}
+
+.notice-views {
+    color: #95a5a6;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .notice-section {
+        padding: 20px 15px;
+    }
+    
+    .notice-filters {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+    
+    .filter-options,
+    .search-option {
+        justify-content: center;
+    }
+    
+    .search-option {
+        flex-direction: column;
+    }
+    
+    .search-option input {
+        min-width: auto;
+    }
+    
+    .notice-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .notice-title-area {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .notice-footer {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    
+    .subscription-input {
+        flex-direction: column;
+    }
+    
+    .subscription-options {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .notice-stats .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .important-notices,
+    .notice-filters,
+    .notice-item,
+    .notice-subscription,
+    .notice-stats {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .notice-title {
+        font-size: 1em;
+    }
+    
+    .notice-badge {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+    
+    .notice-stats .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .notice-stats .stat-number {
+        font-size: 2em;
+    }
+    
+    .important-notices h2,
+    .notice-subscription h2,
+    .notice-stats h2 {
+        font-size: 1.5em;
+    }
+    
+    .notice-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}

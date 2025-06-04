@@ -1,0 +1,566 @@
+/* 모바일 전용 스타일 */
+
+/* 모바일 기본 설정 */
+@media (max-width: 768px) {
+    /* 전체 레이아웃 조정 */
+    .container {
+        flex-direction: column;
+    }
+    
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    /* 사이드바 모바일 최적화 */
+    .sidebar {
+        position: fixed;
+        left: -250px;
+        top: 0;
+        width: 250px;
+        height: 100vh;
+        z-index: 9999;
+        transition: left 0.3s ease;
+        background: #2c3e50;
+    }
+    
+    .sidebar.mobile-open {
+        left: 0;
+    }
+    
+    /* 모바일 햄버거 메뉴 */
+    .mobile-menu-toggle {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 10000;
+        background: #3498db;
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 18px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* 모바일 오버레이 */
+    .mobile-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 9998;
+    }
+    
+    .mobile-overlay.active {
+        display: block;
+    }
+    
+    /* 헤더 모바일 최적화 */
+    .header {
+        padding: 15px 0;
+        margin-left: 0;
+    }
+    
+    .header-content {
+        padding: 0 60px 0 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .header .logo {
+        height: 35px;
+    }
+    
+    .header h1 {
+        font-size: 1.3em;
+    }
+    
+    /* 메인 콘텐츠 패딩 조정 */
+    .page-header {
+        padding: 15px 0;
+    }
+    
+    .page-header h1 {
+        font-size: 2em;
+    }
+    
+    .page-header p {
+        font-size: 1em;
+    }
+    
+    /* 검색 및 필터 모바일 최적화 */
+    .search-filter-section,
+    .faq-search-section {
+        padding: 20px 15px;
+    }
+    
+    .search-box {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .search-box input {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .search-btn {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .filter-options {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+    
+    .brand-filter {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    /* 카드 및 그리드 모바일 최적화 */
+    .stores-grid,
+    .gallery-grid,
+    .categories-grid,
+    .troubleshooting-grid,
+    .stats-grid,
+    .features-grid,
+    .benefits-grid,
+    .plans-grid,
+    .team-grid,
+    .partners-grid,
+    .recommended-grid,
+    .inquiry-types-grid,
+    .faq-preview-grid,
+    .operating-hours-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    /* 스토어 카드 모바일 최적화 */
+    .store-card,
+    .favorite-store-card {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .store-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .store-actions {
+        align-self: flex-end;
+        width: 100%;
+        justify-content: flex-end;
+    }
+    
+    /* 상세 페이지 모바일 최적화 */
+    .store-basic-info {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .stock-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .timeline-item {
+        left: 30px !important;
+        width: calc(100% - 50px) !important;
+        text-align: left !important;
+        padding-left: 15px !important;
+        padding-right: 0 !important;
+    }
+    
+    .timeline-item::before {
+        left: -7px !important;
+    }
+    
+    /* 폼 모바일 최적화 */
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px; /* iOS 줌 방지 */
+    }
+    
+    .form-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .submit-btn,
+    .reset-btn,
+    .detail-btn,
+    .cta-button {
+        width: 100%;
+        padding: 15px;
+        font-size: 16px;
+    }
+    
+    /* 탭 모바일 최적화 */
+    .tab-label {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+        padding: 12px;
+    }
+    
+    .tab-content {
+        padding: 20px 15px;
+    }
+    
+    /* 통계 카드 모바일 최적화 */
+    .stat-item {
+        padding: 20px 15px;
+        text-align: center;
+    }
+    
+    .stat-number {
+        font-size: 2em;
+    }
+    
+    /* 댓글 모바일 최적화 */
+    .comment-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .comment-form {
+        padding: 20px 15px;
+    }
+    
+    /* 갤러리 모바일 최적화 */
+    .gallery-filters {
+        padding: 20px 15px;
+    }
+    
+    .filter-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .filter-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .image-container {
+        height: 200px;
+    }
+    
+    .image-overlay {
+        padding: 15px;
+    }
+    
+    /* 페이지네이션 모바일 최적화 */
+    .pagination,
+    .notice-pagination,
+    .comment-pagination {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+    
+    .page-btn {
+        min-width: 40px;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    /* 모달 모바일 최적화 */
+    .modal-content,
+    .lightbox-content {
+        width: 95%;
+        max-width: none;
+        margin: 20px;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+    
+    /* 텍스트 크기 조정 */
+    h1 { font-size: 1.8em; }
+    h2 { font-size: 1.5em; }
+    h3 { font-size: 1.3em; }
+    h4 { font-size: 1.1em; }
+    
+    /* 패딩 및 마진 조정 */
+    .section-padding {
+        padding: 20px 15px;
+    }
+    
+    /* 스크롤 최적화 */
+    .scroll-container {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* 작은 모바일 기기 (480px 이하) */
+@media (max-width: 480px) {
+    /* 더 작은 화면을 위한 추가 최적화 */
+    .page-header h1 {
+        font-size: 1.6em;
+    }
+    
+    .hero-section h1 {
+        font-size: 1.8em;
+    }
+    
+    .hero-subtitle {
+        font-size: 1em;
+    }
+    
+    /* 카드 패딩 더 줄이기 */
+    .store-card,
+    .favorite-store-card,
+    .gallery-item,
+    .notice-item {
+        padding: 12px;
+    }
+    
+    /* 폰트 크기 더 조정 */
+    .store-header h3 {
+        font-size: 1.1em;
+    }
+    
+    .store-info p {
+        font-size: 13px;
+    }
+    
+    /* 버튼 크기 조정 */
+    .favorite-btn {
+        font-size: 16px;
+        padding: 8px;
+    }
+    
+    /* 입력 필드 최적화 */
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px;
+        font-size: 16px;
+    }
+    
+    /* 검색창 최적화 */
+    .search-box input {
+        padding: 12px 15px;
+        font-size: 15px;
+    }
+    
+    /* 이미지 크기 조정 */
+    .gallery-image,
+    .profile-image {
+        height: 150px;
+    }
+    
+    /* 테이블 대체 (카드 형태로) */
+    .table-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* 터치 디바이스 전용 스타일 */
+@media (hover: none) and (pointer: coarse) {
+    /* 터치 타겟 크기 최적화 */
+    button,
+    .btn,
+    a,
+    input[type="radio"],
+    input[type="checkbox"] {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* 호버 효과 제거 */
+    .store-card:hover,
+    .gallery-item:hover,
+    .category-card:hover {
+        transform: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* 터치 액션 최적화 */
+    .touch-action-pan-y {
+        touch-action: pan-y;
+    }
+    
+    .touch-action-pan-x {
+        touch-action: pan-x;
+    }
+    
+    .touch-action-manipulation {
+        touch-action: manipulation;
+    }
+}
+
+/* 모바일 전용 유틸리티 클래스 */
+@media (max-width: 768px) {
+    .mobile-hide {
+        display: none !important;
+    }
+    
+    .mobile-show {
+        display: block !important;
+    }
+    
+    .mobile-text-center {
+        text-align: center !important;
+    }
+    
+    .mobile-text-left {
+        text-align: left !important;
+    }
+    
+    .mobile-full-width {
+        width: 100% !important;
+    }
+    
+    .mobile-no-padding {
+        padding: 0 !important;
+    }
+    
+    .mobile-small-padding {
+        padding: 10px !important;
+    }
+    
+    .mobile-margin-bottom {
+        margin-bottom: 15px !important;
+    }
+    
+    .mobile-stack {
+        flex-direction: column !important;
+    }
+    
+    .mobile-center {
+        justify-content: center !important;
+        align-items: center !important;
+    }
+}
+
+/* iOS Safari 전용 최적화 */
+@supports (-webkit-touch-callout: none) {
+    /* iOS 특정 스타일 */
+    .ios-fix {
+        -webkit-appearance: none;
+        -webkit-border-radius: 0;
+    }
+    
+    /* iOS에서 입력 필드 줌 방지 */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+        font-size: 16px !important;
+    }
+    
+    /* iOS 스크롤 최적화 */
+    .scroll-smooth {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* 안드로이드 크롬 전용 최적화 */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    /* 안드로이드 특정 스타일 */
+    .android-fix {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* 고해상도 디스플레이 최적화 */
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+    /* 레티나 디스플레이용 이미지 최적화 */
+    .retina-image {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* 모바일 가로 모드 */
+@media (max-width: 768px) and (orientation: landscape) {
+    .header {
+        padding: 10px 0;
+    }
+    
+    .header h1 {
+        font-size: 1.1em;
+    }
+    
+    .hero-section {
+        padding: 30px 20px;
+    }
+    
+    .hero-section h1 {
+        font-size: 1.6em;
+    }
+    
+    /* 키보드가 올라올 때 뷰포트 조정 */
+    .keyboard-adjust {
+        height: auto;
+        min-height: auto;
+    }
+}
+
+/* 접근성 향상 */
+@media (max-width: 768px) {
+    /* 포커스 표시 강화 */
+    button:focus,
+    input:focus,
+    select:focus,
+    textarea:focus,
+    a:focus {
+        outline: 3px solid #3498db;
+        outline-offset: 2px;
+    }
+    
+    /* 터치 피드백 */
+    button:active,
+    .btn:active {
+        transform: scale(0.98);
+        transition: transform 0.1s ease;
+    }
+}
+
+/* 모바일 성능 최적화 */
+@media (max-width: 768px) {
+    /* GPU 가속 활용 */
+    .gpu-accelerated {
+        transform: translateZ(0);
+        will-change: transform;
+    }
+    
+    /* 애니메이션 최적화 */
+    .mobile-animate {
+        animation-duration: 0.3s;
+        animation-timing-function: ease-out;
+    }
+    
+    /* 이미지 로딩 최적화 */
+    .lazy-load {
+        loading: lazy;
+    }
+}

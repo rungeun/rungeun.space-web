@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>갤러리 - 편의점 재고 확인 서비스</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 사이드바 -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>메뉴</h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="index.html">메인페이지</a></li>
+                <li><a href="store-list.html">편의점 목록</a></li>
+                <li><a href="favorites.html">즐겨찾기</a></li>
+                <li><a href="about.html">서비스 소개</a></li>
+                <li><a href="contact.html">문의하기</a></li>
+                <li><a href="help.html">도움말</a></li>
+                <li><a href="notice.html">공지사항</a></li>
+                <li><a href="gallery.html" class="active">갤러리</a></li>
+            </ul>
+        </nav>
+
+        <!-- 메인 콘텐츠 -->
+        <div class="main-content">
+            <!-- 헤더 -->
+            <header class="header">
+                <div class="header-content">
+                    <img src="images/logo.png" alt="편의점 재고 확인 서비스" class="logo">
+                    <h1>편의점 재고 확인 서비스</h1>
+                </div>
+            </header>
+
+            <!-- 갤러리 섹션 -->
+            <main class="gallery-section">
+                <div class="page-header">
+                    <h1>갤러리</h1>
+                    <p>편의점 재고 확인 서비스의 다양한 모습을 확인해보세요</p>
+                </div>
+
+                <!-- 갤러리 필터 -->
+                <div class="gallery-filters">
+                    <h2>카테고리</h2>
+                    <div class="filter-buttons">
+                        <input type="radio" id="all-category" name="gallery-filter" value="all" checked>
+                        <label for="all-category" class="filter-btn">전체</label>
+                        
+                        <input type="radio" id="stores-category" name="gallery-filter" value="stores">
+                        <label for="stores-category" class="filter-btn">편의점</label>
+                        
+                        <input type="radio" id="food-category" name="gallery-filter" value="food">
+                        <label for="food-category" class="filter-btn">신선식품</label>
+                        
+                        <input type="radio" id="interface-category" name="gallery-filter" value="interface">
+                        <label for="interface-category" class="filter-btn">서비스 화면</label>
+                        
+                        <input type="radio" id="team-category" name="gallery-filter" value="team">
+                        <label for="team-category" class="filter-btn">팀 소개</label>
+                    </div>
+                </div>
+
+                <!-- 이미지 갤러리 -->
+                <div class="gallery-grid">
+                    <!-- 편의점 카테고리 -->
+                    <div class="gallery-item" data-category="stores">
+                        <div class="image-container">
+                            <img src="images/convenience-store-1.jpg" alt="GS25 강남역점 외관" class="gallery-image">
+                            <div class="image-overlay">
+                                <h3>GS25 강남역점</h3>
+                                <p>24시간 운영하는 대형 편의점</p>
+                                <button class="view-detail-btn">자세히 보기</button>
+                            </div>
+                        </div>
+                        <div class="image-info">
+                            <h4>GS25 강남역점 외관</h4>
+                            <p class="image-description">서울 강남구에 위치한 대표적인 편의점으로, 다양한 신선식품을 항상 준비하고 있습니다.</p>
+                            <div class="image-meta">
+                                <span class="category-tag stores">편의점</span>
+                                <span class="date">2024.01.15</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="stores">
+                        <div class="image-container">
+                            <img src="images/convenience-store-2.jpg" alt="CU 역삼점 내부" class="gallery-image">
+                            <div class="image-overlay">
+                                <h3>CU 역삼점</h3>
+                                <p>깔끔하고 정돈된 매장 내부</p>
+                                <button class="view-detail-btn">자세히 보기</button>
+                            </div>
+                        </div>
+                        <div class="image-info">
+                            <h4>CU 역삼점 내부 모습</h4>
+                            <p class="image-description">체계적으로 정리된 상품 진열과 편리한 쇼핑 환경을 제공하는 매장입니다.</p>
+                            <div class="image-meta">
+                                <span class="category-tag stores">편의점</span>
+                                <span class="date">2024.01.12</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="stores">
+                        <div class="image-container">
+                            <img src="images/convenience-store-3.jpg" alt="세븐일레븐 선릉점" class="gallery-image">
+                            <div class="image-overlay">
+                                <h3>세븐일레븐 선릉점</h3>
+                                <p>현대적인 인테리어의 편의점</p>
+                                <button class="view-detail-btn">자세히 보기</button>
+                            </div>
+                        </div>
+                        <div class="image-info">
+                            <h4>세븐일레븐 선릉점</h4>
+                            <p class="image-description">최신 인테리어와 디지털 사이니지를 도입한 스마트 편의점입니다.</p>
+                            <div class="image-meta">
+                                <span class="category-tag stores">편의점</span>
+                                <span class="date">2024.01.10</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 신선식품 카테고리 -->
+                    <div class="gallery-item" data-category="food">
+                        <div class="image-container">
+                            <img src="images/food-dosirak.jpg" alt="다양한 도시락" class="gallery-image">
+                            <div class="image-overlay">
+                                <h3>프리미엄 도시락</h3>
+                                <p>영양 균형을 고려한 건강한 도시락</p>
+                                <button class="view-detail-btn">자세히 보기</button>
+                            </div>
+                        </div>
+                        <div class="image-info">
+                            <h4>다양한 종류의 도시락</h4>
+                            <p class="image-description">매일 신선하게 조리되는 다양한 도시락 메뉴들입니다.</p>
+                            <div class="image-meta">
+                                <span class="category-tag food">신선식품</span>
+                                <span class="date">2024.01.08</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="food">
+                        <div class="image-container">
+                            <img src="images/food-kimbap.jpg" alt="신선한 김밥" class="gallery-image">
+                            <div class="image-overlay">
+                                <h3>김밥 코너</h3>
+                                <p>매일 새롭게 만드는 김밥</p>
+                                <button class="view-detail-btn">자세히 보기</button>
+                            </div>
+                        </div>
+                        <div class="image-info">
+                            <h4>신선한 김밥 진열대</h4>
+                            <p class="image-description">참치김밥, 야채김밥, 소고기김밥 등 다양한 김밥이 준비되어 있습니다.</p>
+                            <div class="image-meta">
+                                <span class="category-tag food">신선식품</span>
+                                <span class="date">2024.01.05</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="food">
+                        <div class="image-container">
+                            <img src="images/food-hotbar.jpg" alt="따뜻한 핫바" class="gallery-image">
+                            <div class="image-overlay">
+                                <h3>핫바 코너</h3>
+                                <p>따뜻하고 맛있는 핫바</p>
+                                <button class="view-detail-btn">자세히 보기</button>
+                            </div>
+                        </div>
+                        <div class="image-info">
+                            <h4>따뜻한 핫바 진열</h4>
+                            <p class="image-description">언제나 따뜻하게 유지되는 다양한 핫바 메뉴들입니다.</p>
+                            <div class="image-meta">
+                                <span class="category-tag food">신선식품</span>
+                                <span class="date">2024.01.03</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 서비스 화면 카테고리 -->
+                    <div class="gallery-item" data-category="interface">
+                        <div class="image-container">
+                            <img src="images/hero-bg.jpg" alt="메인 화면" class="gallery-image">
+                            <div class="image-overlay">
+                                <h3>메인 화면</h3>
+                                <p>직관적이고 사용하기 쉬운 인터페이스</p>
+                                <button class="view-detail-btn">자세히 보기</button>
+                            </div>
+                        </div>
+                        <div class="image-info">
+                            <h4>서비스 메인 화면</h4>
+                            <p class="image-description">사용자 친화적인 디자인으로 설계된 메인 화면입니다.</p>
+                            <div class="image-meta">
+                                <span class="category-tag interface">서비스 화면</span>
+                                <span class="date">2024.01.01</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 팀 소개 카테고리 -->
+                    <div class="gallery-item" data-category="team">
+                        <div class="image-container">
+                            <img src="images/about-team.jpg" alt="개발팀" class="gallery-image">
+                            <div class="image-overlay">
+                                <h3>개발팀</h3>
+                                <p>열정적인 개발팀 멤버들</p>
+                                <button class="view-detail-btn">자세히 보기</button>
+                            </div>
+                        </div>
+                        <div class="image-info">
+                            <h4>서비스 개발팀</h4>
+                            <p class="image-description">편의점 재고 확인 서비스를 개발하고 운영하는 팀입니다.</p>
+                            <div class="image-meta">
+                                <span class="category-tag team">팀 소개</span>
+                                <span class="date">2023.12.30</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="interface">
+                        <div class="image-container">
+                            <img src="images/contact-bg.jpg" alt="문의 화면" class="gallery-image">
+                            <div class="image-overlay">
+                                <h3>문의 시스템</h3>
+                                <p>편리한 고객 지원 시스템</p>
+                                <button class="view-detail-btn">자세히 보기</button>
+                            </div>
+                        </div>
+                        <div class="image-info">
+                            <h4>고객 문의 시스템</h4>
+                            <p class="image-description">고객의 다양한 문의를 신속하게 처리하는 시스템입니다.</p>
+                            <div class="image-meta">
+                                <span class="category-tag interface">서비스 화면</span>
+                                <span class="date">2023.12.28</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 추가 이미지들 -->
+                    <div class="gallery-item" data-category="stores">
+                        <div class="image-container">
+                            <img src="images/loading.gif" alt="로딩 애니메이션" class="gallery-image">
+                            <div class="image-overlay">
+                                <h3>로딩 화면</h3>
+                                <p>사용자 경험을 위한 로딩 애니메이션</p>
+                                <button class="view-detail-btn">자세히 보기</button>
+                            </div>
+                        </div>
+                        <div class="image-info">
+                            <h4>로딩 애니메이션</h4>
+                            <p class="image-description">데이터 로딩 중 표시되는 사용자 친화적인 애니메이션입니다.</p>
+                            <div class="image-meta">
+                                <span class="category-tag interface">서비스 화면</span>
+                                <span class="date">2023.12.25</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="food">
+                        <div class="image-container">
+                            <img src="images/icon-search.png" alt="검색 아이콘" class="gallery-image">
+                            <div class="image-overlay">
+                                <h3>검색 기능</h3>
+                                <p>빠르고 정확한 검색 시스템</p>
+                                <button class="view-detail-btn">자세히 보기</button>
+                            </div>
+                        </div>
+                        <div class="image-info">
+                            <h4>검색 기능 아이콘</h4>
+                            <p class="image-description">원하는 편의점과 상품을 빠르게 찾을 수 있는 검색 기능입니다.</p>
+                            <div class="image-meta">
+                                <span class="category-tag interface">서비스 화면</span>
+                                <span class="date">2023.12.20</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="team">
+                        <div class="image-container">
+                            <img src="images/icon-favorite.png" alt="즐겨찾기 아이콘" class="gallery-image">
+                            <div class="image-overlay">
+                                <h3>즐겨찾기</h3>
+                                <p>자주 이용하는 편의점 관리</p>
+                                <button class="view-detail-btn">자세히 보기</button>
+                            </div>
+                        </div>
+                        <div class="image-info">
+                            <h4>즐겨찾기 기능</h4>
+                            <p class="image-description">자주 이용하는 편의점을 즐겨찾기로 등록하여 편리하게 관리할 수 있습니다.</p>
+                            <div class="image-meta">
+                                <span class="category-tag interface">서비스 화면</span>
+                                <span class="date">2023.12.18</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 갤러리 통계 -->
+                <div class="gallery-stats">
+                    <h2>갤러리 통계</h2>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">127</div>
+                            <div class="stat-label">총 이미지</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">45</div>
+                            <div class="stat-label">편의점 사진</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">32</div>
+                            <div class="stat-label">신선식품</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50</div>
+                            <div class="stat-label">서비스 화면</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 이미지 업로드 섹션 -->
+                <div class="image-upload-section">
+                    <h2>이미지 기여하기</h2>
+                    <p>편의점이나 신선식품 사진을 공유해주세요!</p>
+                    <form class="upload-form">
+                        <div class="form-group">
+                            <label for="image-file">이미지 파일:</label>
+                            <input type="file" id="image-file" accept="image/*" multiple>
+                        </div>
+                        <div class="form-group">
+                            <label for="image-title">제목:</label>
+                            <input type="text" id="image-title" placeholder="이미지 제목을 입력하세요" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="image-description">설명:</label>
+                            <textarea id="image-description" rows="3" placeholder="이미지에 대한 설명을 입력하세요"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="image-category">카테고리:</label>
+                            <select id="image-category" required>
+                                <option value="">카테고리 선택</option>
+                                <option value="stores">편의점</option>
+                                <option value="food">신선식품</option>
+                                <option value="interface">서비스 화면</option>
+                                <option value="team">팀 소개</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="photographer">촬영자:</label>
+                            <input type="text" id="photographer" placeholder="촬영자 이름 (선택사항)">
+                        </div>
+                        <button type="submit" class="upload-btn">이미지 업로드</button>
+                    </form>
+                </div>
+            </main>
+
+            <!-- 푸터 -->
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-info">
+                        <h3>제작자 정보</h3>
+                        <p>편의점 재고 확인 서비스</p>
+                        <p>개발자: 웹 개발팀</p>
+                        <p>이메일: contact@convenience-store.com</p>
+                        <p>전화: 02-1234-5678</p>
+                    </div>
+                    <div class="footer-links">
+                        <h3>바로가기</h3>
+                        <ul>
+                            <li><a href="index.html">메인페이지</a></li>
+                            <li><a href="store-list.html">편의점 목록</a></li>
+                            <li><a href="favorites.html">즐겨찾기</a></li>
+                            <li><a href="about.html">서비스 소개</a></li>
+                            <li><a href="contact.html">문의하기</a></li>
+                            <li><a href="help.html">도움말</a></li>
+                            <li><a href="notice.html">공지사항</a></li>
+                            <li><a href="gallery.html">갤러리</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 편의점 재고 확인 서비스. All rights reserved.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

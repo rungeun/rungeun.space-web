@@ -1,0 +1,592 @@
+/* 서비스 소개 페이지 스타일 */
+.about-section {
+    flex: 1;
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 서비스 개요 섹션 */
+.service-overview {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.overview-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.overview-text h2 {
+    color: #2c3e50;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.lead-text {
+    font-size: 1.3em;
+    color: #3498db;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.overview-text p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.key-features {
+    margin-top: 30px;
+}
+
+.key-features h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.feature-list li:hover {
+    transform: translateX(10px);
+}
+
+.feature-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #3498db;
+    padding: 8px;
+}
+
+.feature-content h4 {
+    color: #2c3e50;
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+}
+
+.feature-content p {
+    color: #666;
+    margin: 0;
+    font-size: 14px;
+}
+
+.team-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 개발 스토리 섹션 */
+.development-story {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.development-story h2 {
+    color: #2c3e50;
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 3px solid #e74c3c;
+    padding-bottom: 10px;
+}
+
+.story-timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.story-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #3498db, #e74c3c);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    width: 45%;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+    padding-right: 30px;
+}
+
+.timeline-item:nth-child(even) {
+    left: 55%;
+    text-align: left;
+    padding-left: 30px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #3498db;
+    border: 3px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px #3498db;
+    top: 20px;
+}
+
+.timeline-item:nth-child(odd)::before {
+    right: -7px;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: -7px;
+}
+
+.timeline-date {
+    background: #3498db;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.timeline-content {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+    color: #2c3e50;
+    margin: 0 0 10px 0;
+    font-size: 1.3em;
+}
+
+.timeline-content p {
+    color: #666;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* 서비스 통계 섹션 */
+.service-stats {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.service-stats h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.stat-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-10px);
+}
+
+.stat-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.stat-number {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.stat-label {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* 팀 소개 섹션 */
+.team-introduction {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.team-introduction h2 {
+    color: #2c3e50;
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 3px solid #27ae60;
+    padding-bottom: 10px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.team-member {
+    text-align: center;
+    padding: 25px;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.member-photo {
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #3498db;
+    margin: 0 auto;
+}
+
+.member-info h3 {
+    color: #2c3e50;
+    margin: 0 0 5px 0;
+    font-size: 1.3em;
+}
+
+.member-role {
+    color: #3498db;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.member-description {
+    color: #666;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* 미션과 비전 섹션 */
+.mission-vision {
+    margin-bottom: 40px;
+}
+
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.mission-card,
+.vision-card {
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-card {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+}
+
+.vision-card {
+    background: linear-gradient(135deg, #4834d4, #6c5ce7);
+}
+
+.mission-card::before,
+.vision-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+}
+
+.mission-card:hover::before,
+.vision-card:hover::before {
+    right: -30%;
+}
+
+.mission-card h2,
+.vision-card h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.mission-card p,
+.vision-card p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+}
+
+/* 파트너십 섹션 */
+.partnerships {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.partnerships h2 {
+    color: #2c3e50;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.partnerships-intro {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.partner-item {
+    padding: 25px;
+    border: 2px solid #eee;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.partner-item:hover {
+    border-color: #3498db;
+    transform: translateY(-5px);
+}
+
+.partner-logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.partner-item p {
+    color: #666;
+    margin: 0;
+    font-size: 14px;
+}
+
+/* 향후 계획 섹션 */
+.future-plans {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.future-plans h2 {
+    color: #2c3e50;
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 3px solid #f39c12;
+    padding-bottom: 10px;
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.plan-item {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 5px solid #f39c12;
+    transition: all 0.3s ease;
+}
+
+.plan-item:hover {
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.plan-item h3 {
+    color: #2c3e50;
+    margin: 0 0 20px 0;
+    font-size: 1.3em;
+}
+
+.plan-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.plan-item li {
+    color: #666;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.plan-item li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 20px 15px;
+    }
+    
+    .overview-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .overview-text {
+        order: 2;
+    }
+    
+    .overview-image {
+        order: 1;
+    }
+    
+    .story-timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        width: auto;
+        left: 40px !important;
+        text-align: left !important;
+        padding-left: 20px !important;
+        padding-right: 0 !important;
+    }
+    
+    .timeline-item::before {
+        left: -7px !important;
+    }
+    
+    .stats-grid,
+    .team-grid,
+    .mission-vision-grid,
+    .partners-grid,
+    .plans-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .mission-vision-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-overview,
+    .development-story,
+    .team-introduction,
+    .partnerships,
+    .future-plans {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .overview-text h2 {
+        font-size: 1.8em;
+    }
+    
+    .lead-text {
+        font-size: 1.1em;
+    }
+    
+    .feature-list li {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .timeline-item {
+        left: 30px !important;
+    }
+    
+    .stat-number {
+        font-size: 2em;
+    }
+    
+    .mission-card h2,
+    .vision-card h2 {
+        font-size: 1.6em;
+    }
+    
+    .mission-card p,
+    .vision-card p {
+        font-size: 1em;
+    }
+}

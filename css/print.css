@@ -1,0 +1,491 @@
+/* 프린트용 스타일 */
+
+@media print {
+    /* 기본 프린트 설정 */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    /* 페이지 설정 */
+    @page {
+        margin: 2cm;
+        size: A4;
+    }
+    
+    @page :first {
+        margin-top: 3cm;
+    }
+    
+    @page :left {
+        margin-left: 3cm;
+        margin-right: 2cm;
+    }
+    
+    @page :right {
+        margin-left: 2cm;
+        margin-right: 3cm;
+    }
+    
+    /* 기본 폰트 및 색상 설정 */
+    body {
+        font-family: "Times New Roman", serif !important;
+        font-size: 12pt !important;
+        line-height: 1.6 !important;
+        color: #000 !important;
+        background: white !important;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* 레이아웃 조정 */
+    .container {
+        display: block !important;
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        display: block !important;
+    }
+    
+    /* 숨길 요소들 */
+    .sidebar,
+    .header,
+    .footer,
+    .mobile-menu-toggle,
+    .mobile-overlay,
+    .search-filter-section,
+    .faq-search-section,
+    .notice-filters,
+    .gallery-filters,
+    .pagination,
+    .notice-pagination,
+    .comment-pagination,
+    .form-actions,
+    .quick-actions,
+    .store-actions,
+    .contact-info-quick,
+    .subscription-form,
+    .image-upload-section,
+    .satisfaction-survey-section,
+    button,
+    .btn,
+    .search-btn,
+    .submit-btn,
+    .reset-btn,
+    .detail-btn,
+    .favorite-btn,
+    .report-btn,
+    .notice-expand,
+    .view-detail-btn,
+    .upload-btn,
+    .subscribe-btn,
+    .cta-button,
+    .tab-label,
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"] {
+        display: none !important;
+    }
+    
+    /* 프린트용 제목 */
+    .page-header::before {
+        content: "편의점 재고 확인 서비스 - ";
+        font-weight: bold;
+    }
+    
+    /* 제목 스타일 */
+    h1, h2, h3, h4, h5, h6 {
+        color: #000 !important;
+        page-break-after: avoid;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+        font-weight: bold;
+    }
+    
+    h1 {
+        font-size: 18pt !important;
+        border-bottom: 2pt solid #000;
+        padding-bottom: 0.5em;
+    }
+    
+    h2 {
+        font-size: 16pt !important;
+        border-bottom: 1pt solid #666;
+        padding-bottom: 0.3em;
+    }
+    
+    h3 {
+        font-size: 14pt !important;
+    }
+    
+    h4 {
+        font-size: 12pt !important;
+    }
+    
+    /* 단락 스타일 */
+    p {
+        margin: 0.5em 0;
+        text-align: justify;
+        orphans: 3;
+        widows: 3;
+    }
+    
+    /* 링크 스타일 */
+    a {
+        color: #000 !important;
+        text-decoration: underline !important;
+    }
+    
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        color: #666;
+    }
+    
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+    
+    /* 이미지 최적화 */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+        page-break-inside: avoid;
+        border: 1pt solid #666;
+        margin: 0.5em 0;
+    }
+    
+    .logo {
+        width: 3cm !important;
+        height: auto !important;
+        margin: 0 0 1em 0;
+    }
+    
+    /* 테이블 스타일 */
+    table {
+        border-collapse: collapse !important;
+        width: 100% !important;
+        margin: 1em 0;
+        page-break-inside: avoid;
+    }
+    
+    th, td {
+        border: 1pt solid #000 !important;
+        padding: 0.3em !important;
+        text-align: left !important;
+        vertical-align: top !important;
+    }
+    
+    th {
+        background-color: #f0f0f0 !important;
+        font-weight: bold !important;
+    }
+    
+    /* 리스트 스타일 */
+    ul, ol {
+        margin: 0.5em 0;
+        padding-left: 2em;
+    }
+    
+    li {
+        margin: 0.3em 0;
+    }
+    
+    /* 카드 스타일을 프린트용으로 변환 */
+    .store-card,
+    .favorite-store-card,
+    .notice-item,
+    .faq-item,
+    .gallery-item {
+        border: 1pt solid #666 !important;
+        margin: 1em 0 !important;
+        padding: 1em !important;
+        background: white !important;
+        page-break-inside: avoid;
+        box-shadow: none !important;
+    }
+    
+    .store-header,
+    .notice-header {
+        border-bottom: 1pt solid #ccc !important;
+        padding-bottom: 0.5em !important;
+        margin-bottom: 0.5em !important;
+        display: block !important;
+    }
+    
+    .store-title,
+    .notice-title {
+        font-size: 14pt !important;
+        font-weight: bold !important;
+        margin: 0 !important;
+    }
+    
+    /* 재고 정보 프린트 스타일 */
+    .stock-item {
+        border: 1pt solid #ccc !important;
+        margin: 0.5em 0 !important;
+        padding: 0.5em !important;
+        page-break-inside: avoid;
+    }
+    
+    .stock-status {
+        font-weight: bold !important;
+    }
+    
+    .available .stock-status:after {
+        content: " (재고 있음)";
+    }
+    
+    .out-of-stock .stock-status:after {
+        content: " (품절)";
+    }
+    
+    /* 배지 스타일 */
+    .notice-badge,
+    .status-badge,
+    .category-tag {
+        border: 1pt solid #000 !important;
+        padding: 0.1em 0.3em !important;
+        margin-right: 0.5em !important;
+        background: white !important;
+        color: #000 !important;
+        font-size: 10pt !important;
+        font-weight: bold !important;
+    }
+    
+    /* 메타 정보 */
+    .notice-meta,
+    .image-meta,
+    .store-info {
+        font-size: 10pt !important;
+        color: #666 !important;
+        border-top: 1pt dotted #ccc !important;
+        padding-top: 0.3em !important;
+        margin-top: 0.5em !important;
+    }
+    
+    /* 댓글 섹션 */
+    .comment-item {
+        border-left: 2pt solid #ccc !important;
+        padding-left: 1em !important;
+        margin: 1em 0 !important;
+        page-break-inside: avoid;
+    }
+    
+    .comment-header {
+        font-weight: bold !important;
+        font-size: 11pt !important;
+        margin-bottom: 0.3em !important;
+    }
+    
+    /* FAQ 스타일 */
+    .faq-question {
+        font-weight: bold !important;
+        margin-bottom: 0.5em !important;
+    }
+    
+    .faq-answer {
+        margin-left: 1em !important;
+        margin-bottom: 1em !important;
+    }
+    
+    /* 통계 정보 */
+    .stats-grid {
+        display: block !important;
+    }
+    
+    .stat-item {
+        display: inline-block !important;
+        width: 45% !important;
+        margin: 0.5em 2% !important;
+        padding: 0.5em !important;
+        border: 1pt solid #ccc !important;
+        text-align: center !important;
+    }
+    
+    .stat-number {
+        font-size: 16pt !important;
+        font-weight: bold !important;
+        display: block !important;
+    }
+    
+    .stat-label {
+        font-size: 10pt !important;
+        color: #666 !important;
+    }
+    
+    /* 타임라인 스타일 */
+    .timeline-item {
+        border-left: 2pt solid #000 !important;
+        padding-left: 1em !important;
+        margin: 1em 0 !important;
+        position: relative !important;
+        page-break-inside: avoid;
+    }
+    
+    .timeline-date {
+        font-weight: bold !important;
+        font-size: 11pt !important;
+    }
+    
+    /* 폼 요소 스타일링 */
+    .form-group {
+        margin: 0.5em 0 !important;
+        border-bottom: 1pt dotted #ccc !important;
+        padding-bottom: 0.3em !important;
+    }
+    
+    .form-group label {
+        font-weight: bold !important;
+        font-size: 11pt !important;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+        border: none !important;
+        border-bottom: 1pt solid #000 !important;
+        background: transparent !important;
+        padding: 0.2em 0 !important;
+        font-size: 11pt !important;
+        width: 70% !important;
+        display: inline-block !important;
+    }
+    
+    /* 체크박스와 라디오 버튼 */
+    input[type="checkbox"],
+    input[type="radio"] {
+        display: inline !important;
+        margin-right: 0.3em !important;
+    }
+    
+    input[type="checkbox"]:checked:after {
+        content: " ✓";
+        font-weight: bold;
+    }
+    
+    input[type="radio"]:checked:after {
+        content: " ●";
+        font-weight: bold;
+    }
+    
+    /* 페이지 나누기 */
+    .page-break {
+        page-break-before: always;
+    }
+    
+    .no-break {
+        page-break-inside: avoid;
+    }
+    
+    .break-after {
+        page-break-after: always;
+    }
+    
+    /* 섹션별 구분 */
+    .main-section > section,
+    .store-detail-section > section,
+    .about-section > section {
+        border-top: 2pt solid #000 !important;
+        margin-top: 2em !important;
+        padding-top: 1em !important;
+        page-break-inside: avoid;
+    }
+    
+    /* 프린트 전용 헤더/푸터 */
+    .print-header {
+        display: block !important;
+        text-align: center;
+        border-bottom: 2pt solid #000;
+        padding-bottom: 1em;
+        margin-bottom: 2em;
+    }
+    
+    .print-footer {
+        display: block !important;
+        text-align: center;
+        border-top: 2pt solid #000;
+        padding-top: 1em;
+        margin-top: 2em;
+        font-size: 10pt;
+        color: #666;
+    }
+    
+    /* 배경색 제거 */
+    .hero-section,
+    .solution-section,
+    .cta-section,
+    .service-stats,
+    .contact-info-section,
+    .important-notices {
+        background: white !important;
+        color: #000 !important;
+        border: 1pt solid #666 !important;
+        margin: 1em 0 !important;
+        padding: 1em !important;
+    }
+    
+    /* 그라데이션 및 특수 효과 제거 */
+    * {
+        background-image: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        filter: none !important;
+        transform: none !important;
+        transition: none !important;
+        animation: none !important;
+    }
+    
+    /* 프린트 시 URL 표시 */
+    .print-url:after {
+        content: "웹사이트: https://convenience-store.com";
+        display: block;
+        text-align: center;
+        font-size: 10pt;
+        color: #666;
+        margin-top: 2em;
+        border-top: 1pt solid #ccc;
+        padding-top: 0.5em;
+    }
+    
+    /* 날짜 표시 */
+    .print-date:after {
+        content: "인쇄일: " attr(data-date);
+        display: block;
+        text-align: right;
+        font-size: 10pt;
+        color: #666;
+        margin-top: 1em;
+    }
+    
+    /* QR 코드나 바코드 영역 */
+    .print-qr {
+        width: 3cm;
+        height: 3cm;
+        border: 1pt solid #000;
+        margin: 1em auto;
+        display: block;
+        text-align: center;
+        line-height: 3cm;
+        font-size: 10pt;
+    }
+    
+    /* 프린트 전용 메시지 */
+    .print-only {
+        display: block !important;
+    }
+    
+    .no-print {
+        display: none !important;
+    }
+}
